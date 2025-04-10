@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog Topzera</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ff0000, #ffa500, #ffff00);
+      color: #fff;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #fff700;
+    }
+
+    nav {
+      background-color: rgba(255, 69, 0, 0.9);
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffff00;
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    .titulo-oficial {
+      font-size: 2.2rem;
+      font-weight: bold;
+      color: #ffffff;
+      background: linear-gradient(90deg, #ff0000, #ffa500, #ffff00);
+      padding: 15px;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      text-shadow: 2px 2px #000;
+    }
+
+    article {
+      margin-bottom: 40px;
+    }
+
+    article p {
+      color: #f0f0f0;
+      font-weight: 400;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    .destaque-topzera {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(255, 0, 0, 0.7);
+      color: #fff;
+    }
+
+    #topBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #ff4500;
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      display: none;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    }
+
+    #topBtn:hover {
+      background-color: #e63600;
+    }
+
+    .tools-container {
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .tools-container button {
+      background-color: #ff4500;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 10px 0;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .tools-container button:hover {
+      background-color: #e63600;
+    }
+
+    .tools-container p {
+      margin-top: 10px;
+      color: #ffffcc;
+    }
+  </style>
+</head>
+<body onload="boasVindas()">
+
+  <header>
+    <h1>Blog Topzera 🔥</h1>
+  </header>
+
+  <nav>
+    <a href="#educativo">Educativo</a>
+    <a href="#divertido">Divertido</a>
+    <a href="#noticias">Notícias</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#ferramentas">🛠 Ferramentas</a> <!-- Nova aba -->
+  </nav>
+
+  <main>
+    <article id="educativo">
+      <div class="titulo-oficial">🚀 7 Dicas de Programação Para Iniciantes em 2025</div>
+      <p><span class="destaque-topzera">Comece pela lógica de programação. O primeiro passo é aprender a lógica de programação. ...
+Pratique constantemente. ...
+Comece seu portfólio. ...
+Escolha uma área de estudo para focar. ...
+Faça cursos com bons qualificações. ...
+Participe de uma comunidade de tecnologia. ...
+Leia livros sobre programação.</span></p>
+    </article>
+
+    <article id="divertido">
+      <div class="titulo-oficial">🎮 noticias gamer</div>
+      <p><span class="destaque-topzera">6 melhores jogos 2d: Super Mario Bros Celeste - Shovel Knight - QuackShot - Rayman Legends - Sonic the Hedgehog 2 super mario word - suikoden I&II HDREmaster - Bloodstained: Ritual of the Night</span></p>
+    </article> 
+    <article id="noticias">
+      <div class="titulo-oficial">📰 Notícias Relevantes</div>
+      <p><span class="destaque-topzera"> 5 piores filmes: Madame Teia - As Marvels - Morbius - Viúva Negra - Os Novos Mutantes
+.</span></p>
+    </article>
+
+    <article id="sobre">
+      <div class="titulo-oficial">📣 Sobre o Blog</div>
+      <p><span class="destaque-topzera">esse blog foi cria com a intençao que as pessoas podem divertir lendo as noticias💻🔥</span></p>
+    </article>
+
+    <article id="ferramentas">
+      <div class="titulo-oficial">🛠 Ferramentas Exclusivas</div>
+      <div class="tools-container">
+        <h3>🔢 Contador de Cliques</h3>
+        <button onclick="incrementarContador()">Clique Aqui</button>
+        <p>Cliques: <span id="contador">0</span></p>
+
+        <h3>🔐 Gerador de Senha</h3>
+        <button onclick="gerarSenha()">Gerar Senha Segura</button>
+        <p>Senha: <span id="senhaGerada">---</span></p>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    &copy; 2025 Blog Topzera - Feito com fogo e café ☕🔥 versão1.0.0.2
+  </footer>
+
+  <button onclick="scrollToTop()" id="topBtn">↑ Topo</button>
+
+  <script>
+    function boasVindas() {
+      alert("🔥 Bem-vindo ao BLOG TOZERA! Aproveite o conteúdo e compartilhe com os amigos!");
+    }
+
+    window.onscroll = function () {
+      const btn = document.getElementById("topBtn");
+      btn.style.display = (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) ? "block" : "none";
+    };
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Ferramentas
+    let contador = 0;
+    function incrementarContador() {
+      contador++;
+      document.getElementById("contador").textContent = contador;
+    }
+
+    function gerarSenha() {
+      const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*";
+      let senha = "";
+      for (let i = 0; i < 12; i++) {
+        senha += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      document.getElementById("senhaGerada").textContent = senha;
+    }
+  </script>
+
+</body>
