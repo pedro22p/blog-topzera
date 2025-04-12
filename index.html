@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Blog Topzera com dicas de programação, notícias gamers e ferramentas úteis para quem curte tecnologia.">
   <title>Blog Topzera</title>
   <style>
     body {
@@ -133,6 +134,19 @@
       margin-top: 10px;
       color: #ffffcc;
     }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      .titulo-oficial {
+        font-size: 1.6rem;
+      }
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
   </style>
 </head>
 <body onload="boasVindas()">
@@ -146,59 +160,67 @@
     <a href="#divertido">Divertido</a>
     <a href="#noticias">Notícias</a>
     <a href="#sobre">Sobre</a>
-    <a href="#ferramentas">🛠 Ferramentas</a> <!-- Nova aba -->
+    <a href="#ferramentas">🛠 Ferramentas</a>
   </nav>
 
   <main>
     <article id="educativo">
       <div class="titulo-oficial">🚀 7 Dicas de Programação Para Iniciantes em 2025</div>
-      <p><span class="destaque-topzera">Comece pela lógica de programação. O primeiro passo é aprender a lógica de programação. ...
-Pratique constantemente. ...
-Comece seu portfólio. ...
-Escolha uma área de estudo para focar. ...
-Faça cursos com bons qualificações. ...
-Participe de uma comunidade de tecnologia. ...
-Leia livros sobre programação.</span></p>
+      <p><span class="destaque-topzera">
+        Comece pela lógica de programação.<br>
+        Pratique constantemente.<br>
+        Comece seu portfólio.<br>
+        Escolha uma área de estudo para focar.<br>
+        Faça cursos com boas qualificações.<br>
+        Participe de comunidades de tecnologia.<br>
+        Leia livros sobre programação.
+      </span></p>
     </article>
 
     <article id="divertido">
-      <div class="titulo-oficial">🎮 noticias gamer</div>
-      <p><span class="destaque-topzera">6 melhores jogos 2d: Super Mario Bros Celeste - Shovel Knight - QuackShot - Rayman Legends - Sonic the Hedgehog 2 super mario word - suikoden I&II HDREmaster - Bloodstained: Ritual of the Night</span></p>
+      <div class="titulo-oficial">🎮 Notícias Gamer</div>
+      <p><span class="destaque-topzera">
+        6 melhores jogos 2D: Super Mario Bros, Celeste, Shovel Knight, QuackShot, Rayman Legends, Sonic the Hedgehog 2, Suikoden I & II HD Remaster, Bloodstained: Ritual of the Night.
+      </span></p>
     </article> 
+
     <article id="noticias">
       <div class="titulo-oficial">📰 Notícias Relevantes</div>
-      <p><span class="destaque-topzera"> 5 piores filmes: Madame Teia - As Marvels - Morbius - Viúva Negra - Os Novos Mutantes
-.</span></p>
+      <p><span class="destaque-topzera">
+        5 piores filmes (na opinião do autor): Madame Teia, As Marvels, Morbius, Viúva Negra, Os Novos Mutantes.
+      </span></p>
     </article>
 
     <article id="sobre">
       <div class="titulo-oficial">📣 Sobre o Blog</div>
-      <p><span class="destaque-topzera">esse blog foi cria com a intençao que as pessoas podem divertir lendo as noticias💻🔥</span></p>
+      <p><span class="destaque-topzera">
+        Este blog foi criado com a intenção de que as pessoas possam se divertir lendo notícias, dicas e curiosidades sobre o mundo da tecnologia 💻🔥
+      </span></p>
     </article>
 
     <article id="ferramentas">
       <div class="titulo-oficial">🛠 Ferramentas Exclusivas</div>
       <div class="tools-container">
         <h3>🔢 Contador de Cliques</h3>
-        <button onclick="incrementarContador()">Clique Aqui</button>
+        <button onclick="incrementarContador()" aria-label="Clique para contar">Clique Aqui</button>
         <p>Cliques: <span id="contador">0</span></p>
 
         <h3>🔐 Gerador de Senha</h3>
-        <button onclick="gerarSenha()">Gerar Senha Segura</button>
+        <button onclick="gerarSenha()" aria-label="Gerar senha segura">Gerar Senha Segura</button>
         <p>Senha: <span id="senhaGerada">---</span></p>
       </div>
     </article>
   </main>
 
   <footer>
-    &copy; 2025 Blog Topzera - Feito com fogo e café ☕🔥 versão1.0.0.2
+    &copy; 2025 Blog Topzera - Feito com fogo e café ☕🔥 Versão 1.0.0.2
   </footer>
 
-  <button onclick="scrollToTop()" id="topBtn">↑ Topo</button>
+  <button onclick="scrollToTop()" id="topBtn" aria-label="Voltar ao topo">↑ Topo</button>
 
   <script>
     function boasVindas() {
-      alert("🔥 Bem-vindo ao BLOG TOZERA! Aproveite o conteúdo e compartilhe com os amigos!");
+      alert("🔥 Bem-vindo ao BLOG TOPZERA! Aproveite o conteúdo e compartilhe com os amigos!");
     }
 
     window.onscroll = function () {
@@ -210,7 +232,6 @@ Leia livros sobre programação.</span></p>
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // Ferramentas
     let contador = 0;
     function incrementarContador() {
       contador++;
@@ -228,3 +249,6 @@ Leia livros sobre programação.</span></p>
   </script>
 
 </body>
+</html>
+
+
