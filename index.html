@@ -1,5 +1,4 @@
-
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
@@ -110,6 +109,17 @@
     #topBtn:hover {
       background-color: #e63600;
     }
+
+    .counter {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #ffffff;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body onload="boasVindas()">
@@ -121,11 +131,14 @@
   <nav>
     <a href="#educativo">Educativo</a>
     <a href="#divertido">NOTICIAS NO MUNDO GAMER</a>
-    <a href="#sobre">NOTICIAS DO BLOG</a>
+    <a href="#sobre">Sobre</a>
     <a href="#DICAS">DICAS DE APRENDIZADO</a>
   </nav>
 
   <main>
+    <!-- Contador de visualizações -->
+    <div class="counter" id="counter">Visualizações: 248</div>
+
     <section id="educativo">
       <div class="titulo-oficial">🚀 Dicas Para Aprender a Programar</div>
       <ol>
@@ -144,7 +157,7 @@
     </section>
 
     <section id="sobre">
-      <div class="titulo-oficial">📣 noticia do blog</div>
+      <div class="titulo-oficial">📣 Sobre o Blog</div>
       <p><span class="destaque-topzera">noticias do blog: PATEMOS 193 visualizações, vamos alcançar 230 visualizações🥳🥳</span></p>
     <section id="divertido">
       <div class="titulo-oficial">🎮 NOTICIAS NO MUNDO GAMER!</div>
@@ -160,44 +173,4 @@
       <div class="titulo-oficial">🎮 DICAS NO MUNDO GAMER!</div>
       <ol>
         <li><strong>Nunca fique sem materiais.</strong> Ter sempre os recursos necessários é essencial para a sobrevivência no início do jogo.</li>
-        <li><strong>Replante as árvores que derrubou.</strong> Isso ajuda a manter o equilíbrio no jogo e garantir mais recursos a longo prazo.</li>
-        <li><strong>Não construa um abrigo de madeira.</strong> Prefira materiais mais fortes, como pedras, para garantir mais segurança.</li>
-        <li><strong>Evite sair à noite no início do jogo.</strong> Durante a noite, os monstros se tornam mais agressivos e perigosos.</li>
-        <li><strong>Sempre tenha comida no inventário.</strong> Isso é crucial para manter a saúde e evitar morrer de fome durante o jogo.</li>
-        <li><strong>Crie uma fonte de água infinita.</strong> Isso garante que você nunca precise se preocupar com a escassez de água em seus jogos de sobrevivência.</li>
-        <li><strong>Crie sua própria fazenda.</strong> Ter recursos como comida e materiais acessíveis facilita muito a progressão no jogo.</li>
-        <li><strong>Saiba bem o que criar.</strong> Antes de construir algo, tenha certeza de ⛏️que é útil para sua estratégia e progresso no jogo dicas minecraft⛏️.</li>
-      </ol>
-    </section>
-  </main>
-
-  <footer>
-    &copy; 2025 Pedro Rafael Padilha Sartori. Todos os direitos reservados.
-  </footer>
-
-  <button onclick="topFunction()" id="topBtn" title="Voltar ao topo">Top</button>
-
-  <script>
-    // Quando o usuário rolar 20px para baixo, mostre o botão
-    window.onscroll = function() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("topBtn").style.display = "block";
-      } else {
-        document.getElementById("topBtn").style.display = "none";
-      }
-    };
-
-    // Quando o usuário clicar no botão, volte para o topo
-    function topFunction() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
-
-    // Função para boas-vindas
-    function boasVindas() {
-      alert("Bem-vindo ao Blog Topzera! Aproveite os conteúdos!");
-    }
-  </script>
-
-</body>
-</html>
+        <li><strong>Repl
