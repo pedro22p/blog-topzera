@@ -1,4 +1,5 @@
-           <html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -16,15 +17,9 @@
     }
 
     @keyframes gradientAnim {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     header {
@@ -42,15 +37,17 @@
 
     nav {
       background-color: rgba(255, 69, 0, 0.9);
-      padding: 10px;
+      padding: 15px;
       text-align: center;
+      margin-bottom: 30px;
     }
 
     nav a {
       color: #fff;
       text-decoration: none;
-      margin: 0 15px;
+      margin: 0 20px;
       font-weight: bold;
+      font-size: 1.1rem;
       transition: color 0.3s;
     }
 
@@ -60,35 +57,39 @@
 
     main {
       padding: 40px 20px;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: rgba(255, 255, 255, 0.08);
       border-radius: 15px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.4);
     }
 
     .titulo-oficial {
-      font-size: 2.2rem;
+      font-size: 2rem;
       font-weight: bold;
       color: #ffffff;
       background: linear-gradient(90deg, #ff0000, #ffa500, #ffff00);
       padding: 15px;
       border-radius: 10px;
-      margin: 30px 0;
+      margin: 50px 0 20px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.5);
       text-shadow: 2px 2px #000;
     }
 
-    article {
-      margin-bottom: 40px;
+    section {
+      margin-bottom: 50px;
     }
 
-    article p {
+    article p, ol li {
       color: #f0f0f0;
-      font-weight: 400;
       font-size: 1.1rem;
       line-height: 1.8;
       text-align: justify;
+      margin-bottom: 10px;
+    }
+
+    ol {
+      padding-left: 20px;
     }
 
     .destaque-topzera {
@@ -132,7 +133,7 @@
       padding: 10px;
       border-radius: 10px;
       text-align: center;
-      margin-top: 20px;
+      margin: 10px 0 30px;
     }
 
     /* RESPONSIVIDADE */
@@ -173,69 +174,71 @@
   </style>
 </head>
 <body onload="boasVindas()">
+
   <header>
     <h1>BLOG TOPZERAAA!!!🔥</h1>
   </header>
 
   <nav>
     <a href="#educativo">Educativo</a>
-    <a href="#divertido">NOTÍCIAS NO MUNDO GAMER</a>
-    <a href="#sobre">Sobre o blog</a>
-    <a href="#DICAS">DICAS DE APRENDIZADO</a>
+    <a href="#divertido">Notícias Gamer</a>
+    <a href="#sobre">Sobre o Blog</a>
+    <a href="#DICAS">Dicas de Jogo</a>
   </nav>
 
   <main>
-    <div class="counter" id="counter">Visualizações: 491</div>
-    <div class="counter" id="counter">clones: 156</div>
+    <div class="counter">Visualizações: 491</div>
+    <div class="counter">Clones: 156</div>
 
     <section id="educativo">
-      <div class="titulo-oficial">🚀 10 dicas para cria um blog 2025</div>
+      <div class="titulo-oficial">🚀 10 Dicas Para Criar Um Blog em 2025</div>
       <ol>
-           <li><stronge>Escolher uma plataforma de blog</strong></li>
-           <li><strong>Selecionar uma hospedagem github e melhor ele ja ta um domino gratis</strong></li>
-           <li><strong>Escolher um tema e nicho</strong></li>
-           <li><strong>Criar um calendario editorial</strong></li>
-           <li><strong>Escrever o primeiro post</strong></li>
-           <li><strong>Promover o blog</strong></li>
-           <li><strong>Escrever sobre assundo relevantes</strong></li>
-           <li><strong>Criar um layout agradavel</strong></li>
-            </ol>
+        <li><strong>Escolher uma plataforma de blog</strong></li>
+        <li><strong>Selecionar uma hospedagem (GitHub é ótimo e tem domínio grátis)</strong></li>
+        <li><strong>Escolher um tema e nicho</strong></li>
+        <li><strong>Criar um calendário editorial</strong></li>
+        <li><strong>Escrever o primeiro post</strong></li>
+        <li><strong>Promover o blog</strong></li>
+        <li><strong>Escrever sobre assuntos relevantes</strong></li>
+        <li><strong>Criar um layout agradável</strong></li>
+      </ol>
     </section>
 
     <section id="sobre">
       <div class="titulo-oficial">📣 Notícias do Blog</div>
-      <p><span class="destaque-topzera">Notícias do blog: BATEMOS 433 visualizações! Vamos alcançar 1000 visualizações e, quando isso acontecer, vou lançar a nova versão! Versão 1.0.3.6 do site.</span></p>
+      <p><span class="destaque-topzera">Notícia: BATEMOS 433 visualizações! Vamos alcançar 1000! Quando isso acontecer, sai a versão 1.0.3.6 do site!</span></p>
     </section>
 
     <section id="divertido">
-      <div class="titulo-oficial">🎮 NOTÍCIAS NO MUNDO GAMER!</div>
+      <div class="titulo-oficial">🎮 Notícias no Mundo Gamer</div>
       <ol>
-        <li><strong>6 jogos grátis na Steam em abril</strong></li>
-        <li><strong>13/abr./2025. Gratuito. Supercharged Demo.</li>
-        <li><strong>13/abr./2025. HR Simulator</strong></li>
-        <li><strong>13/abr./2025. It Digs Up</strong></li>
-        <li><strong>13/abr./2025. Clonizer</strong></li>
-        <li><strong>13/abr./2025. Parking Lot Simulator: Car Collector</strong></li>  
-            </ol>
+        <li><strong>6 jogos grátis na Steam em abril:</strong></li>
+        <li><strong>13/abr./2025 - Supercharged Demo</strong></li>
+        <li><strong>13/abr./2025 - HR Simulator</strong></li>
+        <li><strong>13/abr./2025 - It Digs Up</strong></li>
+        <li><strong>13/abr./2025 - Clonizer</strong></li>
+        <li><strong>13/abr./2025 - Parking Lot Simulator: Car Collector</strong></li>
+      </ol>
     </section>
 
     <section id="DICAS">
-      <div class="titulo-oficial">💡 DICAS DE SOBREVIVÊNCIA EM JOGOS!</div>
+      <div class="titulo-oficial">💡 Dicas de Sobrevivência em Jogos</div>
       <ol>
-        <li><strong>jogo de hoje cupphead</strong></li>
-        <li><strong>escolha uma plataforma</strong></li>
-        <li><strong>jogue com um amigo</strong></li>
-        <li><strong>treine para enfrentra os chafes!</strong></li>
-        <li><strong>use o bacamarte para causar dano</strong></li>
-        <li><strong>obetenha moedas para comprar intens</strong></li>
-        <li><strong>use para ganhar golpe ex</strong></li>
-        <li><strong>experiente a reliquia bomba de fumaça</strong></li>
+        <li><strong>Jogo de hoje: Cuphead</strong></li>
+        <li><strong>Escolha uma plataforma</strong></li>
+        <li><strong>Jogue com um amigo</strong></li>
+        <li><strong>Treine para enfrentar os chefes!</strong></li>
+        <li><strong>Use o bacamarte para causar dano</strong></li>
+        <li><strong>Obtenha moedas para comprar itens</strong></li>
+        <li><strong>Use para ganhar golpe EX</strong></li>
+        <li><strong>Experimente a relíquia Bomba de Fumaça</strong></li>
       </ol>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Blog Topzera. feito com fogo e cafe🔥☕ versão 1.0.2.5</p>
+    <p>&copy; 2025 Blog Topzera. Feito com fogo e café 🔥☕ - Versão 1.0.2.5</p>
   </footer>
+
 </body>
-              </html>
+</html>
