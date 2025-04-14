@@ -206,7 +206,7 @@
 
     <section id="sobre">
       <div class="titulo-oficial">📣 Notícias do Blog</div>
-      <p><span class="destaque-topzera">Notícia: BATEMOS 557visualizações! Vamos alcançar 1000! Quando isso acontecer, sai a versão 1.0.3.6 do site!</span></p>
+      <p><span class="destaque-topzera">Notícia: BATEMOS 557 visualizações! Vamos alcançar 1000! Quando isso acontecer, sai a versão 1.0.3.6 do site!</span></p>
     </section>
 
     <section id="divertido">
@@ -240,6 +240,44 @@
     <p>&copy; 2025 Blog Topzera. Feito com fogo e café 🔥☕ - Versão 1.0.2.5</p>
   </footer>
 
+  <!-- Firebase Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
+
+  <script>
+    // Configuração do Firebase
+    const firebaseConfig = {
+      apiKey: "SUA_API_KEY",
+      authDomain: "SEU_AUTH_DOMAIN",
+      databaseURL: "SEU_DATABASE_URL",
+      projectId: "SEU_PROJECT_ID",
+      storageBucket: "SEU_STORAGE_BUCKET",
+      messagingSenderId: "SEU_MESSAGING_SENDER_ID",
+      appId: "SEU_APP_ID"
+    };
+
+    // Inicializa o Firebase
+    const app = firebase.initializeApp(firebaseConfig);
+    const database = firebase.database(app);
+
+    // Função para incrementar as visualizações
+    function incrementarVisualizacoes() {
+      const visualizacaoRef = database.ref('visualizacoes');
+
+      visualizacaoRef.get().then((snapshot) => {
+        let visualizacoes = snapshot.val() || 0;
+        visualizacoes++;
+
+        // Atualiza o contador no banco de dados
+        visualizacaoRef.set(visualizacoes);
+
+        // Atualiza o contador exibido no site
+        document.querySelector('.counter').innerText = "Visualizações: " + visualizacoes;
+      });
+    }
+
+    // Chama a função quando a página for carregada
+    window.onload = incrementarVisualizacoes;
+  </script>
 </body>
 </html>
-
