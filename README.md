@@ -1,1 +1,2 @@
-<img src="https://www.canva.com/design/DAGke9PaGyk/b0cdyLVuVo6_e7Ilghcukg/view?utm_content=DAGke9PaGyk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h381a2fd01c" alt="blog_tozera!">
+<img src="![Uploading image.png…]()
+" alt="blog_tozera!">
