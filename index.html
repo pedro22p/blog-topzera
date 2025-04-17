@@ -136,7 +136,6 @@
       margin: 10px 0 30px;
     }
 
-    /* RESPONSIVIDADE */
     @media (max-width: 768px) {
       header h1 {
         font-size: 1.8rem;
@@ -181,10 +180,11 @@
 
   <nav>
     <a href="#educativo">Educativo</a>
-<a href="#divertido">Notícias Gamer</a>
-<a href="#sobre">Sobre o Blog</a>
-<a href="#DICAS">Dicas de Jogo</a>
+    <a href="#divertido">Notícias Gamer</a>
+    <a href="#sobre">Sobre o Blog</a>
+    <a href="#DICAS">Dicas de Jogo</a>
   </nav>
+
   <main>
     <div class="counter">Visualizações: 745</div>
     <div class="counter">Clones: 216</div>
@@ -234,48 +234,27 @@
       </ol>
     </section>
   </main>
+
   <footer>
     <p>&copy; 2025 Blog Topzera. Feito com fogo e café 🔥☕ - Versão 1.0.2.5</p>
   </footer>
 
-  <!-- Firebase Scripts -->
-  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
+  <button id="topBtn" onclick="scrollToTop()">Topo</button>
 
   <script>
-    // Configuração do Firebase
-    const firebaseConfig = {
-      apiKey: "SUA_API_KEY",
-      authDomain: "SEU_AUTH_DOMAIN",
-      databaseURL: "SEU_DATABASE_URL",
-      projectId: "SEU_PROJECT_ID",
-      storageBucket: "SEU_STORAGE_BUCKET",
-      messagingSenderId: "SEU_MESSAGING_SENDER_ID",
-      appId: "SEU_APP_ID"
-    };
-
-    // Inicializa o Firebase
-    const app = firebase.initializeApp(firebaseConfig);
-    const database = firebase.database(app);
-
-    // Função para incrementar as visualizações
-    function incrementarVisualizacoes() {
-      const visualizacaoRef = database.ref('visualizacoes');
-
-      visualizacaoRef.get().then((snapshot) => {
-        let visualizacoes = snapshot.val() || 0;
-        visualizacoes++;
-
-        // Atualiza o contador no banco de dados
-        visualizacaoRef.set(visualizacoes);
-
-        // Atualiza o contador exibido no site
-        document.querySelector('.counter').innerText = "Visualizações: " + visualizacoes;
-      });
+    function boasVindas() {
+      console.log("Bem-vindo ao Blog Topzera!");
     }
 
-    // Chama a função quando a página for carregada
-    window.onload = incrementarVisualizacoes;
+    // botão voltar ao topo
+    const topBtn = document.getElementById("topBtn");
+    window.onscroll = () => {
+      topBtn.style.display = (document.documentElement.scrollTop > 200) ? "block" : "none";
+    };
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   </script>
 </body>
 </html>
