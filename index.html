@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Blog Topzera: notícias, diversão, dicas de programação e ferramentas exclusivas!">
   <title>Blog Topzera</title>
-  <link rel="icon" href="https://img.freepik.com/fotos-premium/icone-de-fogo_511032-246.jpg?semt=ais_hybrid">
+  <link rel="icon" href="https://i.pinimg.com/736x/a1/b6/bd/a1b6bd4bbe3027d3f0047bf9639fa964.jpg" type="image/jpg">
   <style>
     body {
       margin: 0;
@@ -136,6 +136,17 @@
       margin: 10px 0 30px;
     }
 
+    /* Estilo para os comentários */
+    #comentarios-lista div {
+      background-color: #000; /* Fundo preto */
+      color: #fff; /* Texto branco */
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      font-size: 1rem;
+    }
+
+    /* RESPONSIVIDADE */
     @media (max-width: 768px) {
       header h1 {
         font-size: 1.8rem;
@@ -233,28 +244,69 @@
         <li><strong>Experimente a relíquia Bomba de Fumaça</strong></li>
       </ol>
     </section>
+
+    <!-- Seção de Comentários -->
+    <section id="comentarios">
+      <div class="titulo-oficial">💬 Comentários</div>
+      <div id="comentarios-lista"></div>
+
+      <textarea id="comentario" placeholder="Deixe seu comentário aqui..."></textarea>
+      <button onclick="comentar()">Comentar</button>
+    </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Blog Topzera. Feito com fogo e café 🔥☕ - Versão 1.0.2.5</p>
+    <p>&copy; 2025 Blog Topzera - Todos os direitos reservados</p>
   </footer>
 
-  <button id="topBtn" onclick="scrollToTop()">Topo</button>
+  <!-- BOTÃO DE VOLTAR AO TOPO -->
+  <button id="topBtn" onclick="topFunction()">Voltar ao Topo</button>
+
+  <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
 
   <script>
-    function boasVindas() {
-      console.log("Bem-vindo ao Blog Topzera!");
-    }
-
-    // botão voltar ao topo
-    const topBtn = document.getElementById("topBtn");
-    window.onscroll = () => {
-      topBtn.style.display = (document.documentElement.scrollTop > 200) ? "block" : "none";
+    var firebaseConfig = {
+      apiKey: "SUA_API_KEY",
+      authDomain: "SEU_AUTH_DOMAIN",
+      databaseURL: "SUA_DATABASE_URL",
+      projectId: "SEU_PROJECT_ID",
+      storageBucket: "SEU_STORAGE_BUCKET",
+      messagingSenderId: "SEU_MESSAGING_SENDER_ID",
+      appId: "SEU_APP_ID"
     };
+    firebase.initializeApp(firebaseConfig);
+    var database = firebase.database();
 
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+    function mostrarComentarios() {
+      var comentariosRef = database.ref('comentarios');
+      comentariosRef.on('value', function(snapshot) {
+        var comentarios = snapshot.val();
+        var listaComentarios = document.getElementById('comentarios-lista');
+        listaComentarios.innerHTML = '';
+        for (var id in comentarios) {
+          var comentario = comentarios[id];
+          var divComentario = document.createElement('div');
+          divComentario.textContent = comentario.texto;
+          listaComentarios.appendChild(divComentario);
+        }
+      });
     }
+
+    function comentar() {
+      var comentarioTexto = document.getElementById('comentario').value;
+      if (comentarioTexto.trim()) {
+        var comentariosRef = database.ref('comentarios');
+        comentariosRef.push({
+          texto: comentarioTexto
+        });
+        document.getElementById('comentario').value = '';
+      }
+    }
+
+    // Carregar os comentários quando a página carregar
+    window.onload = mostrarComentarios;
   </script>
+
 </body>
 </html>
