@@ -11,7 +11,176 @@
   <link rel="icon" type="image/jpeg" href="https://img.freepik.com/fotos-premium/d-renderizar-icone-de-chama-de-fogo-azul-gas-monoxido-de-carbono-realista-design-de-logotipo-blaze_263857-563.jpg?w=360">
 
   <style>
-    /* todo o seu CSS está aqui */
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #2e3d4f;
+      padding: 20px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background-image: url('imagem-do-header.jpg');
+      background-size: cover;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      position: relative;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ff6347;
+      transform: translateY(-3px) scale(1.05);
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: orange;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    nav a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+      justify-content: center;
+    }
+
+    .main-content {
+      flex: 3;
+      min-width: 280px;
+      margin-bottom: 20px;
+    }
+
+    .sidebar {
+      flex: 1;
+      min-width: 250px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #2e3d4f;
+      font-size: 22px;
+    }
+
+    a {
+      color: orange;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .highlight {
+      color: orange;
+      font-weight: bold;
+    }
+
+    .titulo-oficial {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 20px 0 10px;
+      color: #2e3d4f;
+    }
+
+    .destaque-topzera {
+      color: green;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 20px;
+      margin: 10px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar h3 {
+      font-size: 18px;
+      color: #2e3d4f;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .sidebar li {
+      margin: 10px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #2e3d4f;
+      color: white;
+    }
+
+    footer p:last-child {
+      font-size: 12px;
+      color: #ccc;
+    }
+
+    @media (max-width: 768px) {
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
+
+      .container {
+        flex-direction: column;
+        padding: 10px;
+      }
+
+      .main-content, .sidebar {
+        margin: 0;
+      }
+
+      section {
+        margin: 10px 0;
+        padding: 15px;
+      }
+
+      .titulo-oficial {
+        font-size: 18px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -30,7 +199,7 @@
     <div class="main-content">
       <h2>BLOG: Fevereiro 2025 – Pedro Rafael, Criador</h2>
       <p><span class="highlight">Postado em:</span> Abril 21, 2025</p>
-      <p>Esse mes fizemos alterações para deixar nosso site mais limpo e moderno, incluindo mudança de fundo, atualizações do momento entre outros.</p>
+      <p>Esse mes  fizemos alteracoes para deixar nosos site mais limpo e moderno, incluindo, mudança de fundo, Atualizações do momento entre outros</p>
       <p>Fique ligado para dicas de programação, segurança da informação, projetos em Linux e muito mais!</p>
     </div>
     <div class="sidebar">
@@ -44,7 +213,7 @@
   </div>
 
   <section id="educativo">
-    <div class="titulo-oficial">Top 10 Dicas Para Criar Um Blog em 2025</div>
+    <div class="titulo-oficial">top 10 Dicas Para Criar Um Blog em 2025</div>
     <ol>
       <li>Escolher uma plataforma de blog</li>
       <li>Selecionar uma hospedagem (GitHub é ótimo e tem domínio grátis)</li>
@@ -59,7 +228,7 @@
 
   <section id="sobre">
     <div class="titulo-oficial">📣 Notícias do Blog</div>
-    <p><span class="destaque-topzera">Notícia: BATEMOS 1.198 visualizações</span></p>
+    <p><span class="destaque-topzera">Notícia: BATEMOS 1.198  visualizações</span></p>
   </section>
 
   <section id="divertido">
